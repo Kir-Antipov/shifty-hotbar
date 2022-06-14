@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "shifty-hotbar",
+  "version": "${version}",
+  "name": "Shifty Hotbar",
+  "description": "Hotbar can be whatever I want.",
+  "authors": [
+    "Kir_Antipov"
+  ],
+  "contact": {
+    "website": "https://github.com/Kir-Antipov/shifty-hotbar",
+    "sources": "https://github.com/Kir-Antipov/shifty-hotbar",
+    "issues": "https://github.com/Kir-Antipov/shifty-hotbar/issues/new/choose"
+  },
+  "license": "MIT",
+  "icon": "assets/shifty-hotbar/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.kir.shiftyhotbar.ShiftyHotbar"
+    ]
+  },
+  "mixins": [
+    "shifty-hotbar.mixins.json"
+  ],
+  "custom": {
+    "modmanager": {
+      "modrinth": "Vtzg2pos",
+      "curseforge": 633518
+    }
+  },
+  "depends": {
+    "fabric": "*",
+    "fabricloader": "*",
+    "minecraft": "${minecraft}",
+    "java": ">=17"
+  },
+  "suggests": {
+    "cloth-config": "${cloth_config}",
+    "modmenu": "${modmenu}"
+  }
+}
