@@ -10,16 +10,12 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Environment(EnvType.CLIENT)
 public final class ScrollUtil {
-    private static final Map<KeyBinding, ScrollableInventory.ScrollType> MODIFIERS = Map.of(
-        ShiftyHotbarKeyBindings.ROW_MODIFIER, ScrollableInventory.ScrollType.ROW,
-        ShiftyHotbarKeyBindings.COLUMN_MODIFIER, ScrollableInventory.ScrollType.COLUMN,
-        ShiftyHotbarKeyBindings.ROW_IN_SELECTED_COLUMN_MODIFIER, ScrollableInventory.ScrollType.ROW_IN_SELECTED_COLUMN,
-        ShiftyHotbarKeyBindings.COLUMN_IN_SELECTED_ROW_MODIFIER, ScrollableInventory.ScrollType.COLUMN_IN_SELECTED_ROW
-    );
+    private static final Map<KeyBinding, ScrollableInventory.ScrollType> MODIFIERS;
 
     public static @Nullable ScrollableInventory.ScrollType getActiveScrollModifier() {
         long handle = MinecraftClient.getInstance().getWindow().getHandle();
@@ -129,5 +125,13 @@ public final class ScrollUtil {
                 }
             }
         }
+    }
+
+    static {
+        MODIFIERS = new HashMap<>();
+        MODIFIERS.put(ShiftyHotbarKeyBindings.ROW_MODIFIER, ScrollableInventory.ScrollType.ROW);
+        MODIFIERS.put(ShiftyHotbarKeyBindings.COLUMN_MODIFIER, ScrollableInventory.ScrollType.COLUMN);
+        MODIFIERS.put(ShiftyHotbarKeyBindings.ROW_IN_SELECTED_COLUMN_MODIFIER, ScrollableInventory.ScrollType.ROW_IN_SELECTED_COLUMN);
+        MODIFIERS.put(ShiftyHotbarKeyBindings.COLUMN_IN_SELECTED_ROW_MODIFIER, ScrollableInventory.ScrollType.COLUMN_IN_SELECTED_ROW);
     }
 }

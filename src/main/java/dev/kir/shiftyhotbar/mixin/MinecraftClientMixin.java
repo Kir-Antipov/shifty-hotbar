@@ -20,7 +20,7 @@ final class MinecraftClientMixin {
 
     @ModifyVariable(method = "handleInputEvents", at = @At(value = "FIELD", shift = At.Shift.BEFORE, target = "Lnet/minecraft/entity/player/PlayerInventory;selectedSlot:I"))
     private int setSelectedSlot(int i) {
-        PlayerInventory inventory = this.player.getInventory();
+        PlayerInventory inventory = this.player.inventory;
         ScrollableInventory.ScrollType scrollType = ScrollUtil.getActiveScrollModifier();
         if (scrollType != null) {
             ((ScrollableInventory)inventory).scrollTo(i, scrollType);

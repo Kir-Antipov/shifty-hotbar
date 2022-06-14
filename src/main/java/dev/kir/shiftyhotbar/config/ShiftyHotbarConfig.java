@@ -8,7 +8,7 @@ import net.fabricmc.loader.api.FabricLoader;
 @Environment(EnvType.CLIENT)
 public interface ShiftyHotbarConfig {
     static ShiftyHotbarConfig resolve() {
-        return FabricLoader.getInstance().isModLoaded("cloth-config") ? ShiftyHotbarClothConfig.getInstance() : new ShiftyHotbarConfig() { };
+        return FabricLoader.getInstance().isModLoaded("cloth-config") || FabricLoader.getInstance().isModLoaded("cloth-config2") ? ShiftyHotbarClothConfig.getInstance() : new ShiftyHotbarConfig() { };
     }
 
     default boolean invertRowScroll() {

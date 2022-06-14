@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 public interface ScrollableInventory {
     static @Nullable ScrollableInventory getInstance() {
         PlayerEntity player = MinecraftClient.getInstance().player;
-        return player == null ? null : (ScrollableInventory)player.getInventory();
+        return player == null ? null : (ScrollableInventory)player.inventory;
     }
 
     void scroll(double scrollAmount, ScrollType scrollType);

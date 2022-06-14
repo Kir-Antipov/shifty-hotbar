@@ -36,7 +36,7 @@
     "fabric": "*",
     "fabricloader": "*",
     "minecraft": "${minecraft}",
-    "java": ">=16"
+    "java": ">=8"
   },
   "suggests": {
     "cloth-config": "${cloth_config}",
