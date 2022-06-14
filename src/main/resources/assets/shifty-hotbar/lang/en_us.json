@@ -1,4 +1,22 @@
 {
+  "key.categories.shifty_hotbar": "Shifty Hotbar",
+
+  "key.shifty_hotbar.row_modifier": "Row modifier",
+  "key.shifty_hotbar.previous_row": "Previous row",
+  "key.shifty_hotbar.next_row": "Next row",
+
+  "key.shifty_hotbar.row_in_selected_column_modifier": "Row-in-column modifier",
+  "key.shifty_hotbar.previous_row_in_selected_column": "Previous row-in-column",
+  "key.shifty_hotbar.next_row_in_selected_column": "Next row-in-column",
+
+  "key.shifty_hotbar.column_modifier": "Column modifier",
+  "key.shifty_hotbar.previous_column": "Previous column",
+  "key.shifty_hotbar.next_column": "Next column",
+
+  "key.shifty_hotbar.column_in_selected_row_modifier": "Column-in-row modifier",
+  "key.shifty_hotbar.previous_column_in_selected_row": "Previous column-in-row",
+  "key.shifty_hotbar.next_column_in_selected_row": "Next column-in-row",
+
   "text.autoconfig.shifty_hotbar.title": "Shifty Hotbar",
   "text.autoconfig.shifty_hotbar.option.invertRowScroll": "Invert row scroll",
   "text.autoconfig.shifty_hotbar.option.invertColumnScroll": "Invert column scroll"
