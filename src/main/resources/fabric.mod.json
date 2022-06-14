@@ -18,9 +18,6 @@
   "entrypoints": {
     "client": [
       "dev.kir.shiftyhotbar.ShiftyHotbar"
-    ],
-    "modmenu": [
-      "dev.kir.shiftyhotbar.compat.modmenu.ModMenuCompat"
     ]
   },
   "mixins": [
@@ -37,9 +34,5 @@
     "fabricloader": "*",
     "minecraft": "${minecraft}",
     "java": ">=8"
-  },
-  "suggests": {
-    "cloth-config": "${cloth_config}",
-    "modmenu": "${modmenu}"
   }
 }

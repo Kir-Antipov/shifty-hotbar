@@ -4,9 +4,9 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerInteractionManager;
+import net.minecraft.container.SlotActionType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.screen.slot.SlotActionType;
 
 import java.util.Optional;
 
@@ -34,6 +34,6 @@ public final class SlotSwapper {
         if (client.interactionManager == null || inventory == null || inventory.player == null) {
             return Optional.empty();
         }
-        return Optional.of(new SlotSwapper(client.interactionManager, inventory.player, inventory.player.playerScreenHandler.syncId));
+        return Optional.of(new SlotSwapper(client.interactionManager, inventory.player, inventory.player.playerContainer.syncId));
     }
 }

@@ -6,7 +6,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.jetbrains.annotations.Nullable;
 
@@ -21,12 +21,12 @@ public final class ScrollUtil {
         long handle = MinecraftClient.getInstance().getWindow().getHandle();
         for (Map.Entry<KeyBinding, ScrollableInventory.ScrollType> pair : MODIFIERS.entrySet()) {
             KeyBinding binding = pair.getKey();
-            InputUtil.Key boundKey = KeyBindingHelper.getBoundKeyOf(binding);
-            if (binding.isUnbound() || boundKey.getCategory() != InputUtil.Type.KEYSYM) {
+            InputUtil.KeyCode boundKey = KeyBindingHelper.getBoundKeyOf(binding);
+            if (binding.isNotBound() || boundKey.getCategory() != InputUtil.Type.KEYSYM) {
                 continue;
             }
 
-            if (InputUtil.isKeyPressed(handle, boundKey.getCode())) {
+            if (InputUtil.isKeyPressed(handle, boundKey.getKeyCode())) {
                 return pair.getValue();
             }
         }
