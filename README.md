@@ -7,9 +7,9 @@
 [![CurseForge](https://img.shields.io/badge/dynamic/json?color=%23f16436&label=CurseForge&query=title&url=https%3A%2F%2Fapi.cfwidget.com%2F633518)](https://www.curseforge.com/minecraft/mc-mods/shifty-hotbar)
 [![GitHub license](https://img.shields.io/github/license/Kir-Antipov/shifty-hotbar.svg?cacheSeconds=36000)](https://github.com/Kir-Antipov/shifty-hotbar#readme)
 
-An utility mod that adds the hotbar shifting ability inspired by Stardew Valley.
+A utility mod that adds the hotbar shifting ability inspired by Stardew Valley.
 
-I know that there are mods like this in the wild, but none of them did suit me whatsoever. Therefore I made the ultimate version that consists of every feature a mod like this can possibly provide:
+I know that there are mods like this in the wild, but none of them did suit me whatsoever. Therefore, I made the ultimate version that consists of every feature a mod like this can possibly provide:
 
  - You can shift inventory rows in **both** directions *(`Up Arrow` and `Down Arrow` by default)*
  - You can shift inventory columns in **both** directions *(`Right Arrow` and `Left Arrow` by default)*
