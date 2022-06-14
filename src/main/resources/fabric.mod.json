@@ -18,6 +18,9 @@
   "entrypoints": {
     "client": [
       "dev.kir.shiftyhotbar.ShiftyHotbar"
+    ],
+    "modmenu": [
+      "dev.kir.shiftyhotbar.compat.modmenu.ModMenuCompat"
     ]
   },
   "mixins": [
