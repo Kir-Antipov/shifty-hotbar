@@ -23,7 +23,7 @@ public final class SlotSwapper {
     }
 
     public void swap(int left, int right) {
-        this.interactionManager.clickSlot(this.syncId, left, right, SlotActionType.SWAP, this.player);
+        this.interactionManager.method_2906(this.syncId, left, right, SlotActionType.SWAP, this.player);
     }
 
     public static Optional<SlotSwapper> from(PlayerInventory inventory) {

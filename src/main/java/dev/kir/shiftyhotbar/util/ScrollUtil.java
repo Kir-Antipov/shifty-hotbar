@@ -18,7 +18,7 @@ public final class ScrollUtil {
     private static final Map<KeyBinding, ScrollableInventory.ScrollType> MODIFIERS;
 
     public static @Nullable ScrollableInventory.ScrollType getActiveScrollModifier() {
-        long handle = MinecraftClient.getInstance().getWindow().getHandle();
+        long handle = MinecraftClient.getInstance().window.getHandle();
         for (Map.Entry<KeyBinding, ScrollableInventory.ScrollType> pair : MODIFIERS.entrySet()) {
             KeyBinding binding = pair.getKey();
             InputUtil.KeyCode boundKey = KeyBindingHelper.getBoundKeyOf(binding);
