@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.kir.shiftyhotbar.compat.mixin",
+  "plugin": "dev.kir.shiftyhotbar.compat.mixin.MixinCompat",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ipn.SlotSwapperMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
