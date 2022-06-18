@@ -21,6 +21,7 @@
     ]
   },
   "mixins": [
+    "shifty-hotbar.compat.mixins.json",
     "shifty-hotbar.mixins.json"
   ],
   "custom": {
@@ -34,5 +35,8 @@
     "fabricloader": "*",
     "minecraft": "${minecraft}",
     "java": ">=8"
+  },
+  "suggests": {
+    "inventory-profiles-next": "${inventory_profiles_next}"
   }
 }

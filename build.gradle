@@ -17,6 +17,13 @@ repositories {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
     }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 dependencies {
@@ -25,12 +32,15 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    modCompileOnly "maven.modrinth:inventory-profiles-next:fabric-${project.ipn_version}"
 }
 
 processResources {
     def fabricModProperties = [
         "version": version,
-        "minecraft": ">=${minecraftDependencyVersion.replaceFirst(/^(\d+\.\d+)(\.\d+|)$/, '$1')}"
+        "minecraft": ">=${minecraftDependencyVersion.replaceFirst(/^(\d+\.\d+)(\.\d+|)$/, '$1')}",
+        "inventory_profiles_next": ">=${project.ipn_version}"
     ]
 
     filesMatching("fabric.mod.json") {
