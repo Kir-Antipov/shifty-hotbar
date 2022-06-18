@@ -24,6 +24,7 @@
     ]
   },
   "mixins": [
+    "shifty-hotbar.compat.mixins.json",
     "shifty-hotbar.mixins.json"
   ],
   "custom": {
@@ -40,6 +41,7 @@
   },
   "suggests": {
     "cloth-config": "${cloth_config}",
+    "inventory-profiles-next": "${inventory_profiles_next}",
     "modmenu": "${modmenu}"
   }
 }
