@@ -5,14 +5,13 @@ import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 public final class MixinCompat implements IMixinConfigPlugin {
-    private static final Map<String, String> PACKAGE_TO_ID = Map.of(
-        "ipn", "inventoryprofilesnext"
-    );
+    private static final Map<String, String> PACKAGE_TO_ID;
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
@@ -50,5 +49,10 @@ public final class MixinCompat implements IMixinConfigPlugin {
 
         int endI = mixinClassName.indexOf('.', mixinStartI + 6);
         return mixinClassName.substring(mixinStartI + 6, endI);
+    }
+
+    static {
+        PACKAGE_TO_ID = new HashMap<>();
+        PACKAGE_TO_ID.put("ipn", "inventoryprofilesnext");
     }
 }
