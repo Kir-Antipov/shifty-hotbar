@@ -24,6 +24,13 @@ repositories {
             includeGroup "me.shedaniel.cloth"
         }
     }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 dependencies {
@@ -37,6 +44,7 @@ dependencies {
     modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}", {
         exclude group: "net.fabricmc.fabric-api"
     })
+    modCompileOnly "maven.modrinth:inventory-profiles-next:fabric-${project.ipn_version}"
 }
 
 processResources {
@@ -44,6 +52,7 @@ processResources {
         "version": version,
         "minecraft": ">=${minecraftDependencyVersion.replaceFirst(/^(\d+\.\d+)(\.\d+|)$/, '$1')}",
         "cloth_config": ">=${project.cloth_version}",
+        "inventory_profiles_next": ">=${project.ipn_version}",
         "modmenu": ">=${project.modmenu_version}",
     ]
 
