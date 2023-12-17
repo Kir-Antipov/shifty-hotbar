@@ -28,7 +28,7 @@
     "shifty-hotbar.mixins.json"
   ],
   "custom": {
-    "modmanager": {
+    "mc-publish": {
       "modrinth": "Vtzg2pos",
       "curseforge": 633518
     }
